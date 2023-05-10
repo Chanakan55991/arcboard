@@ -5,7 +5,7 @@
 </script>
 
 <li>
-	<div class="card w-96 bg-base-100 shadow-xl bg-opacity-25 backdrop-blur-md">
+	<div class="card w-72 bg-base-100 shadow-xl bg-opacity-25 backdrop-blur-md">
 		<figure>
 			<img src={imgSrc} alt="sample" />
 		</figure>

@@ -2,7 +2,7 @@
 	export let user: { userId?: string; email?: string } = { userId: undefined, email: undefined };
 </script>
 
-<nav class="navbar justify-center fixed bg-opacity-0">
+<nav class="navbar z-20 justify-center fixed bg-opacity-0">
 	<div
 		class="flex flex-row max-w-7xl bg-base-100 p-2 rounded-2xl backdrop-blur-md px-4 w-screen justify-between items-center bg-opacity-40 shadow-lg"
 	>
