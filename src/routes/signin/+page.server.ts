@@ -4,13 +4,16 @@ import type { PageServerLoad, Actions } from './$types'
 
 export const load: PageServerLoad = async ({ locals, parent }) => {
   await parent()
-  const session = await locals.auth.validate()
+  const { session } = await locals.auth.validateUser()
   if (session) throw redirect(302, '/dashboard')
   return {}
 }
 
 export const actions: Actions = {
   default: async ({ request, locals }) => {
+    const { session } = await locals.auth.validateUser()
+    if (session) throw redirect(302, '/dashboard')
+
     const form = await request.formData()
     const email = form.get('email')
     const password = form.get('password')

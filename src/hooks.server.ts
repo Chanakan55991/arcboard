@@ -3,10 +3,10 @@ import auth from '$lib/server/auth'
 
 export const handle: Handle = async ({ event, resolve }) => {
   event.locals.auth = auth.handleRequest(event)
-  const { user } = await event.locals.auth.validateUser()
+  const { session } = await event.locals.auth.validateUser()
 
   if (event.url.pathname.startsWith('/dashboard')) {
-    if (!user) {
+    if (!session) {
       throw redirect(303, '/signin')
     }
   }

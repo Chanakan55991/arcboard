@@ -1,4 +1,6 @@
 <script>
 </script>
 
-<h1>hi</h1>
+<div class="h-screen w-screen">
+	<h1>hi</h1>
+</div>
