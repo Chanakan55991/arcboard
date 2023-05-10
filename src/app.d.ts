@@ -2,11 +2,20 @@
 // for information about these interfaces
 declare global {
 	namespace App {
-		// interface Error {}
-		// interface Locals {}
-		// interface PageData {}
-		// interface Platform {}
+		interface Locals {
+			auth: import('lucia-auth').AuthRequest
+		}
 	}
 }
 
-export {};
+/// <reference types="lucia-auth" />
+declare global {
+	namespace Lucia {
+		type Auth = import('$lib/server/auth').Auth
+		type UserAttributes = {
+			email: string
+		}
+	}
+}
+
+export { };

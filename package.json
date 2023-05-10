@@ -35,8 +35,10 @@
 	"dependencies": {
 		"@lucia-auth/adapter-mysql": "^1.1.1",
 		"@planetscale/database": "^1.7.0",
-		"@specialdoom/proi-ui": "^4.1.2",
+		"daisyui": "^2.51.6",
 		"drizzle-orm": "^0.25.4",
-		"lucia-auth": "^1.5.0"
+		"lucia-auth": "^1.5.0",
+		"svelte-french-toast": "^1.0.4-beta.0",
+		"svelte-headlessui": "^0.0.15"
 	}
 }

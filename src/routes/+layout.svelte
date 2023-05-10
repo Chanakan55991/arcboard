@@ -1,8 +1,10 @@
-<script>
-	import '@specialdoom/proi-ui/variables.css';
+<script lang="ts">
 	import '../app.css';
 	import Header from '../lib/header.svelte';
+	import type { PageData } from './$types';
+	export let data: PageData;
+	console.log(data);
 </script>
 
-<Header />
+<Header user={data.user} />
 <slot />
